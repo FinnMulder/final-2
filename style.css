@@ -1,0 +1,319 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #F7FBFD;
+
+}
+header nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+header nav {
+position: absolute;
+top: 0;
+left: 50%; 
+transform: translateX(-50%);
+z-index: 10;
+padding: 3px;
+background: #DBE7F1;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border: 1px solid #585858;
+border-radius: 3em;
+width: 90%; 
+height: 5%;
+margin-top: 1em;
+
+}
+
+header nav img{
+    width: 90px; 
+    height: auto;
+    margin-top: 1em;
+    margin-left: 6px;
+
+}
+.header-css{
+    display: flex;
+}
+header nav a{
+    font-size: 11px;
+    background: #FAE930;
+    color: #3E3E3F;
+    padding: 6px 10px;
+    border-radius: 2em;
+    font-family: 'Chillax';
+    text-decoration: none;
+    margin-right: 6px;
+}
+p{
+    /* text-align: center; */
+}
+section p{
+    /* text-align: center; */
+}
+
+header img{
+    position: relative;
+    top: 0;
+   left: 0;
+   width: 100%;
+   object-fit: cover; 
+   z-index: -1; 
+   margin: 0;
+   padding: 0; 
+}
+
+.grachten-video {
+     position: relative;
+     top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover; 
+    z-index: -1; 
+    margin: 0;
+    padding: 0;
+
+}
+
+header p{
+    background: #CEC1B4;
+    color: white;
+    margin: 0 auto;
+    padding: 2em;
+    align-items: center;
+    font-family: 'Chillax';
+    font-size: medium;
+    margin-top: -0.5em;
+}
+.andere-achtergrond{
+    background: #625D51;
+    color: white;
+    margin: 0 auto;
+    padding: 1.5em ;
+    align-items: center;
+    font-family: 'Chillax';
+    font-size: medium;
+    margin-top: -0.5em;
+    margin-bottom: -0.5em;
+}
+.section-text{
+    margin: 2em;
+}
+
+.section-text h2{
+    font-family: 'Chillax-Semibold';
+    font-size: 1.8em;
+    color: #3E3E3F;
+    text-align: center;
+}
+.section-text p{
+    font-family: 'Chillax-Semibold';
+    color: #3E3E3F;
+    font-size: medium;
+    overflow-wrap: break-word;
+}
+
+@font-face {
+    font-family: 'Chillax';
+    src: url('fonts/Chillax.woff2') format('woff2'), 
+         url('fonts/Chillax.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* slider */
+.slide-content {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    flex-wrap: nowrap;
+    gap: 1em;
+}
+.slide-content h2{
+    font-size: larger;
+}
+.slide-content p{
+    font-size: medium;
+}
+
+.slide-content img {
+    width: 45%;
+    flex-shrink: 0;
+}
+
+#slider input[type=radio] {
+    display: none;
+}
+
+#slides {
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slides .inner {
+    display: flex;
+    width: 400%;
+    height: 300px;
+    transition: margin-left 800ms ease-in-out;
+}
+
+#slide1:checked ~ #slides .inner { margin-left: 0; }
+#slide2:checked ~ #slides .inner { margin-left: -100%; }
+#slide3:checked ~ #slides .inner { margin-left: -200%; }
+#slide4:checked ~ #slides .inner { margin-left: -300%; }
+
+#slides .slide {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #353534;
+    font-family: 'Chillax-Semibold';
+    background: #E5EDF6;
+    border-radius: 3em;
+}
+
+#controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+}
+
+#controls label {
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: 0.4;
+    transition: opacity 0.2s ease-out;
+}
+
+#controls label:hover {
+    opacity: 1;
+}
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float: right;
+    margin: 0 -50px 0 0;
+    display: block;
+}
+
+#slide1:checked ~ #controls label:nth-last-child(2),
+#slide2:checked ~ #controls label:nth-last-child(3),
+#slide3:checked ~ #controls label:nth-last-child(4),
+#slide4:checked ~ #controls label:nth-last-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float: left;
+    margin: 0 0 0 -50px;
+    display: block;
+}
+
+#bullets {
+    margin: 150px 0 0;
+    text-align: center;
+}
+
+#bullets label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #ccc;
+    margin: 0 10px;
+}
+
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+}
+
+@media screen and (max-width: 900px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+        margin: 0;
+    }
+    #slides {
+        margin: 0 auto;
+    }
+}
+/* slider */
+
+/* footer */
+footer {
+    background-color: #9A9999;
+    font-family: 'Chillax';
+    color: white;
+    height: 8em;
+}
+
+footer  p{
+    margin: 0;
+}
+
+h1{
+   position: absolute;
+top: 20%;
+left: 35%; 
+transform: translateX(-50%); 
+z-index: 10;
+padding: 3px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 50%;
+font-size: 1.6em;
+color: #3E3E3F;
+font-family: 'Chillax';
+}
+
+section img{
+    width: 100%;
+}
+
+footer{
+    background-image: url('footer.svg'); 
+  background-repeat: no-repeat;
+  margin-top: -0.5em;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    padding-top: 1em;
+}
+.social-links a{
+    display: inline-block;
+    height: 2.3em;
+    width: 2.2em;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    line-height: 2.5em;
+    border-radius: 50%;
+    color: #D1D9DF;
+}
+#svg2 .cls-2 {
+    fill: #9a9999;
+  }
